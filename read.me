@@ -1,0 +1,24 @@
+#  ThinkPad T470 BIOS Supervisor Password Unlock
+
+Removing the supervisor password (SVP) from my ThinkPad T470 I bought secondhand on Ebay by reflashing its SPI hardware. 
+
+## Why
+When I bought it it was not known that theyre would be a SVP, when I attempted to install a fresh OS I was locked out of the bootloader and prompted for an password.
+This Password locks most settings within bios and gives you read-only access, this prevents me from utilizing the laptop in any meaningful way and limits my control.
+Since the *40/*70 series no long store the SVP on EEPROM shorting the SDA and SPL pins (A method that worked on *30 series and older models) will not work. 
+The only working method I've found will be to dump SPI Flash from Winbond 25Q128JVSQ, patching with Lenovo utility patcher then reflash
+
+## Hardware
+-Ch341A USB Programmer (modded to operate at 3.3V from factory 5V)
+-SOIC-8 Test clip + Jumper wires
+-Target Chip: **Winbond 25Q128JVSQ**, 16 MB SOIC-8, located under the SSD
+
+# Procedure: Modifying the CH34A1
+  Modify CH34A1 to out put at 3.3V instead of 5V
+
+## Why
+Stock data lines deliver 5V, this would stress if not fry the 3.3V winbond chip
+
+## How
+-
+ 
