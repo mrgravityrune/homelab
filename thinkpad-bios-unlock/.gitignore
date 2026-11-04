@@ -1,0 +1,7 @@
+# BIOS images — contain serial/UUID/MAC, never commit
+*.bin
+*.rom
+*.fd
+# build/tool clutter
+lenovo-bios-autopatcher/
+*.log
