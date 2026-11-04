@@ -1,7 +1,7 @@
 # 1. CH341A Programmer Mod (3.3V)
 
 ## Steps
-1. Added a jumper wire from the AMS1117 3.3V regulator output to the chip VCC pin (the kit shipped with the mod already done).
+1. Added a jumper wire from the AMS1117 3.3V regulator output to the chip VCC pin.
 2. Verified the clip read ~3.3V with a multimeter before connecting it to the chip.
 
 ## Why
